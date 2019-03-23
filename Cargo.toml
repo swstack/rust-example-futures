@@ -1,0 +1,9 @@
+[package]
+name = "rust-example-futures"
+version = "0.1.0"
+authors = ["Stephen Stack <sfstack7500@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+futures="0.1.25"
+actix-web = "0.7.0"
