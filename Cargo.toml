@@ -7,3 +7,4 @@ edition = "2018"
 [dependencies]
 futures="0.1.25"
 actix-web = "0.7.0"
+rand = "0.6.5"
