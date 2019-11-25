@@ -10,20 +10,31 @@ fn random_error() -> bool {
 }
 
 fn one_chain() -> Result<String, String> {
-    Ok(String::from("one done"))
+    if random_error() {
+        Err(String::from("one err"))
+    } else {
+        two_chain()
+    }
+
 }
 
 fn two_chain() -> Result<String, String> {
-//    let r = three_chain()?;
-    Ok(String::from("one done"))
+    if random_error() {
+        Err(String::from("two err"))
+    } else {
+        three_chain()
+    }
 }
 
 fn three_chain() -> Result<String, String> {
-    Ok(String::from("three done"))
+    if random_error() {
+        Err(String::from("three err"))
+    } else {
+        Ok(String::from("done"))
+    }
 }
 
-
-fn main_chain() {
+fn main() {
 
 }
 
@@ -33,6 +44,6 @@ mod tests {
 
     #[test]
     fn test_chain() {
-        println!("farts")
+        main()
     }
 }
